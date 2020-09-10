@@ -1,0 +1,20 @@
+export default [
+  'app_mentions:read',
+  'channels:history',
+  'channels:join',
+  'channels:manage',
+  'channels:read',
+  'chat:write',
+  'chat:write.customize',
+  'chat:write.public',
+  'commands',
+  'groups:history',
+  'groups:read',
+  'groups:write',
+  'im:history',
+  'im:write',
+  'incoming-webhook',
+  'mpim:history',
+  'mpim:write',
+  'users:read'
+]

@@ -1,0 +1,38 @@
+{
+  "name": "license-checker-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next -p 4000",
+    "build": "next build",
+    "start": "next start -p 4000",
+    "start-next": "NODE_ENV=production forever start ./node_modules/.bin/next start -p 4000",
+    "start-slackbot": "forever start node ./server/slack/cooler.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grabbeh/license-checker-next.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grabbeh/license-checker-next/issues"
+  },
+  "homepage": "https://github.com/grabbeh/license-checker-next#readme",
+  "dependencies": {
+    "@slack/bolt": "^2.3.0",
+    "@slack/events-api": "^2.3.3",
+    "@slack/web-api": "^5.11.0",
+    "aws-sdk": "^2.748.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.27.0",
+    "next": "^9.4.4",
+    "query-string": "^6.8.3",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17"
+  }
+}
