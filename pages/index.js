@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import { jsx, Box, Flex, Text, Link, BaseStyles } from 'theme-ui'
 import ScrollAnimation from '../components/animations/scrollAnimation'
 import Header from '../components/header'
