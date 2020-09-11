@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start -p 4000",
     "start-next": "NODE_ENV=production forever start ./node_modules/.bin/next start -p 6000",
-    "start-slackbot": "forever start node ./server/slack/cooler.js"
+    "start-slackbot": "NODE_ENV=production forever start ./server.js"
   },
   "repository": {
     "type": "git",

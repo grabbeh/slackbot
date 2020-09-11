@@ -38,6 +38,12 @@ nextApp.prepare().then(() => {
   app.command('/random', random)
   app.command('/walk', walk)
   app.action('positive_click', positive)
+  app.event('url_verification', async ({ event, client }) => {
+    console.log(event)
+  })
+  app.event('app_home_opened', async ({ event, client }) => {
+    console.log(event)
+  })
 
   receiver.router.get('/install', async (req, res) => {
     let url = await receiver.installer.generateInstallUrl({ scopes })

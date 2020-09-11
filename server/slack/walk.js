@@ -4,6 +4,7 @@ const {
   addWalkingUser,
   getWalkingUsers
 } = require('../dynamodb/dynamodb.js')
+const _ = require('lodash')
 
 const walk = async ({ ack, say, client, command }) => {
   await ack()
