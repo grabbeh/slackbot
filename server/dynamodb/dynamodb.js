@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
-import AWS from 'aws-sdk'
-import moment from 'moment'
+const dotenv = require('dotenv')
+const AWS = require('aws-sdk')
+const moment = require('moment')
 dotenv.config({ path: '../../.env' })
 AWS.config.update({
   region: 'eu-west-1',
@@ -8,7 +8,6 @@ AWS.config.update({
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 })
 
-// Create the DynamoDB service object
 var docClient = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' })
 
 const addWalkingUser = async (channelId, userId, user) => {
@@ -196,7 +195,7 @@ const fetchInstall = async teamId => {
   }
 }
 
-export {
+module.exports = {
   addWalkingUser,
   getWalkingUsers,
   findInteraction,

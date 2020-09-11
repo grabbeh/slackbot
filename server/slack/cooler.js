@@ -99,7 +99,7 @@ app.action('positive_click', async ({ client, body, ack, say }) => {
 })
 ;(async () => {
   // Start your app
-  await app.start(process.env.PORT || 3000)
+  await app.start(process.env.PORT || 6000)
   console.log('⚡️ Bolt app is running!')
 })()
 

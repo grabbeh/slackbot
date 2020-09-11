@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   'app_mentions:read',
   'channels:history',
   'channels:join',
