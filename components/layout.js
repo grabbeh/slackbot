@@ -13,7 +13,7 @@ const Layout = props => {
         <title>Water fountain chat</title>
       </Head>
       <ThemeProvider theme={theme}>
-        <Box className='gradient'>{props.children}</Box>
+        <Box>{props.children}</Box>
       </ThemeProvider>
     </div>
   )

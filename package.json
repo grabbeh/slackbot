@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start -p 4000",
     "start-next": "NODE_ENV=production forever start ./node_modules/.bin/next start -p 6000",
-    "start-slackbot": "NODE_ENV=production forever start ./server.js"
+    "start-slackbot": "NODE_ENV=production forever start server.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.28.4",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "uuid": "^8.3.0"
   }
 }

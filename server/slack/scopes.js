@@ -6,7 +6,6 @@ module.exports = [
   'channels:read',
   'chat:write',
   'chat:write.customize',
-  'chat:write.public',
   'commands',
   'groups:history',
   'groups:read',

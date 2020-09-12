@@ -195,6 +195,52 @@ const fetchInstall = async teamId => {
   }
 }
 
+const saveState = async (stateId, content) => {
+  let params = {
+    TableName: 'WATERCOOLERv1',
+    Item: {
+      PK: stateId,
+      SK: `STATE#${stateId}`,
+      ...content
+    }
+  }
+
+  try {
+    await docClient.put(params).promise()
+    return { statusCode: 200, body: JSON.stringify({ message: 'Success' }) }
+  } catch (error) {
+    return {
+      statusCode: 400,
+      error: `Could not fetch: ${error.stack}`
+    }
+  }
+}
+
+const getState = async stateId => {
+  const params = {
+    TableName: 'WATERCOOLERv1',
+    ExpressionAttributeNames: {
+      '#pk': 'PK',
+      '#sk': 'SK'
+    },
+    KeyConditionExpression: '#pk = :pk AND #sk = :sk',
+    ExpressionAttributeValues: {
+      ':pk': stateId,
+      ':sk': `STATE#${stateId}`
+    }
+  }
+
+  try {
+    const data = await docClient.query(params).promise()
+    return data.Items[0]
+  } catch (error) {
+    return {
+      statusCode: 400,
+      error: `Could not fetch: ${error.stack}`
+    }
+  }
+}
+
 module.exports = {
   addWalkingUser,
   getWalkingUsers,
@@ -202,5 +248,7 @@ module.exports = {
   addInteraction,
   updateInteraction,
   storeInstall,
-  fetchInstall
+  fetchInstall,
+  saveState,
+  getState
 }

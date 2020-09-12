@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import Layout from '../components/layout'
-import { jsx, Box, Flex, Text, Link, BaseStyles } from 'theme-ui'
+import { jsx, Box, Flex, BaseStyles } from 'theme-ui'
 import ScrollAnimation from '../components/animations/scrollAnimation'
 import Header from '../components/header'
 import { server } from '../config/server.js'
@@ -10,17 +10,19 @@ import Intro from '../components/intro.mdx'
 const Index = props => {
   return (
     <Layout>
-      <Header />
-      <BaseStyles>
-        <ScrollAnimation>
-          <Flex sx={{ justifyContent: 'center' }}>
-            <Box sx={{ my: 4, mx: 3, width: 600 }}>
-              <Intro />
-              <InstallButton url={props.data} />
-            </Box>
-          </Flex>
-        </ScrollAnimation>
-      </BaseStyles>
+      <Box className='gradient'>
+        <Header />
+        <BaseStyles>
+          <ScrollAnimation>
+            <Flex sx={{ justifyContent: 'center' }}>
+              <Box sx={{ my: 4, mx: 3, width: 600 }}>
+                <Intro />
+                <InstallButton url={props.data} />
+              </Box>
+            </Flex>
+          </ScrollAnimation>
+        </BaseStyles>
+      </Box>
     </Layout>
   )
 }
