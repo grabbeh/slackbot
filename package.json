@@ -1,5 +1,5 @@
 {
-  "name": "license-checker-next",
+  "name": "fountain",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grabbeh/license-checker-next.git"
+    "url": "git+https://github.com/grabbeh/slackbot.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/grabbeh/license-checker-next/issues"
+    "url": "https://github.com/grabbeh/slackbot/issues"
   },
-  "homepage": "https://github.com/grabbeh/license-checker-next#readme",
+  "homepage": "https://github.com/grabbeh/slackbot#readme",
   "resolutions": {
     "@mdx-js/react": "1.6.16"
   },
