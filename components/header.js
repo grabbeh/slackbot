@@ -8,7 +8,7 @@ const Header = () => (
       <Text
         sx={{ fontFamily: 'sansSerif', cursor: 'pointer', fontWeight: 'bold' }}
       >
-        🏠 WATERFOUNTAINCHAT
+        🏠 WATER FOUNTAIN CHAT
       </Text>
     </Link>
   </Box>

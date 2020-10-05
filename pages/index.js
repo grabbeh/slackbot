@@ -29,8 +29,7 @@ const Index = props => {
 
 export default Index
 
-Index.getInitialProps = async props => {
-  const res = await fetch(`${server}/install`)
-  const data = await res.json()
-  return { data }
+export async function getServerSideProps () {
+  const data = await fetch(`${server}/install`).then(r => r.json())
+  return { props: { data } }
 }
