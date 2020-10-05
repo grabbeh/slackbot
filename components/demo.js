@@ -26,7 +26,13 @@ const Demo = () => (
       <Text sx={{ fontSize: 4, fontFamily: 'sansSerif' }}>
         Hey there Barack Obama! Vladimir Putin walks past you in the corridor
       </Text>
-      <Flex sx={{ mt: 3, justifyContent: 'space-between', flexWrap: 'wrap' }}>
+      <Flex
+        sx={{
+          mt: 3,
+          justifyContent: ['none', 'space-between'],
+          flexWrap: 'wrap'
+        }}
+      >
         <OptionBox>
           <Text
             sx={{ fontFamily: 'sansSerif', fontSize: 3, fontWeight: 'bold' }}
@@ -67,6 +73,8 @@ const OptionBox = ({ children }) => (
       bg: 'white',
       cursor: 'pointer',
       p: 2,
+      mb: [2, 0],
+      mr: [2, 0],
       border: '1px solid black',
       borderRadius: '5px'
     }}
